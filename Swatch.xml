@@ -1,5 +1,5 @@
 <!--
-theme name:		Swatch
+theme name:		base - Swatch (Mod - Renetrox)
 version:		1.02
 author:			FPlusGames
 license:		Creative Commons NC-BY-SA-4.0
@@ -66,18 +66,21 @@ license:		Creative Commons NC-BY-SA-4.0
 	
 	
 <feature supported="carousel">
-		<view name="system">
-		<carousel name="systemcarousel">
-    <zIndex>70</zIndex>  
-        <type>horizontal</type>
-         <origin>0.392 0</origin>
-        <pos>0.099 0.11</pos>
-        <size>1.5 0.40</size>
-        <logoScale>1.32</logoScale>
-        <logoSize>0.21 0.23</logoSize>
-        <color>00000000</color>
-        <maxLogoCount>10</maxLogoCount>
-      </carousel>
+        <view name="system">
+            <carousel name="systemcarousel">
+                <zIndex>70</zIndex>
+                <type>horizontal</type>
+                <origin>0.392 0</origin>
+                <pos>0.08 0.11</pos>
+                <size>1.55 0.40</size>
+                <logoAlignment>top</logoAlignment>
+                <logoScale>1.32</logoScale>
+                <logoSize>0.21 0.23</logoSize>
+                <color>00000000</color>
+                <maxLogoCount>12</maxLogoCount>
+                <minLogoOpacity>0.94</minLogoOpacity>
+                <scaledLogoSpacing>1</scaledLogoSpacing>
+            </carousel>
       
        
       <text name="systemInfo">
@@ -118,16 +121,45 @@ license:		Creative Commons NC-BY-SA-4.0
     <zIndex>71</zIndex>   <!-- Asegura que se muestra encima de otros elementos -->
 </image>
 <text name="systemName" extra="true">
-    <origin>0 1</origin>   <!-- Origen en la parte inferior izquierda -->
-    <pos>0.36 0.56</pos>   <!-- Más a la derecha (0.36) y más arriba (0.56) -->
-    <size>0.3 0.1</size>  <!-- Tamaño ajustado -->
-    <color>FFFFFF</color>  <!-- Color blanco -->
-    <text>${system.fullName}</text>  <!-- Texto con el nombre del sistema -->
-    <zIndex>100</zIndex>   <!-- Asegura que se muestra encima de otros elementos -->
-</text>
+                <origin>0 1</origin>
+                <pos>0.34 0.54</pos>
+                <size>0.9 0.1</size>
+                <color>FFFFFF</color>
+                <fontPath>./_inc/fonts/SSTLight.TTF</fontPath>
+                <fontSize>0.068</fontSize>
+                <textStrokeColor>000000ff</textStrokeColor>
+                <textStrokeSize>2</textStrokeSize>
+                <text>${system.fullName}</text>
+                <zIndex>100</zIndex>
+            </text>
  </view>
-</feature>
-	
+    </feature>   
+    <feature supported="navigationsounds">
+      <view name="all">
+         <sound name="systembrowse">
+            <path>./_inc/audio/systembrowse.wav</path>
+         </sound>
+         <sound name="quicksysselect">
+            <path>./_inc/audio/quicksysselect.wav</path>
+         </sound>
+         <sound name="select">
+            <path>./_inc/audio/select.wav</path>
+         </sound>
+         <sound name="back">
+            <path>./_inc/audio/back.wav</path>
+         </sound>
+         <sound name="scroll">
+            <path>./_inc/audio/scroll.wav</path>
+         </sound>
+         <sound name="favorite">
+            <path>./_inc/audio/favorite.wav</path>
+         </sound>
+         <sound name="launch">
+            <path>./_inc/audio/launch.wav</path>
+         </sound>
+      </view>
+   </feature>
+
 	<view name="basic, detailed, video">
 		<image name="logo_background" extra="true">
 			<path>./_inc/images/bg_systembar.png</path>
@@ -154,9 +186,6 @@ license:		Creative Commons NC-BY-SA-4.0
 			<alignment>left</alignment>
 			<size>0.50 0.79</size>
 			<pos>0.04 0.10</pos>
-			<scrollSound>./_inc/audio/menu_scroll.wav</scrollSound>
-			<!--<menuSelectSound>./_inc/audio/menu_select.wav<menuSelectSound>-->
-			<!--<menuBackSound>./_inc/audio/menu_back.wav</menuBackSound>-->
 		</textlist>
 	</view>
 	
@@ -231,7 +260,6 @@ license:		Creative Commons NC-BY-SA-4.0
 			<alignment>left</alignment>
 			<size>0.30 0.52</size>
 			<pos>0.04 0.36</pos>
-			<scrollSound>./_inc/audio/menu_scroll.wav</scrollSound>
 		</textlist>
 		
 		<text name="md_lbl_rating, md_lbl_lastplayed">

@@ -5,7 +5,7 @@
 	
 	<view name="system, basic, detailed, video">
 		<image name="logo">
-			<path>./../_inc/caratulas/${system.theme}.png</path>
+			<path>./../_inc/consoles/${system.theme}.png</path>
 		</image>
 	</view>
 	<view name="basic"></view>
